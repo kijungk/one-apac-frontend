@@ -9,6 +9,7 @@ import { EventsComponent } from './components/events/events.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
+import { BroadcastComponent } from './pages/broadcast/broadcast.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { StatisticsComponent } from './pages/statistics/statistics.component';
     EventsComponent,
     HeaderComponent,
     NavigationComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    BroadcastComponent
   ],
   imports: [
     BrowserModule,
