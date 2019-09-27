@@ -1,3 +1,4 @@
+// reset box-sizing, padding, and margin
 html {
   box-sizing: border-box;
 }
@@ -10,3 +11,34 @@ html {
   margin: 0;
   padding: 0;
 }
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// reset button styles
+button {
+  background-color: transparent;
+
+  border: none;
+
+  font: inherit;
+  color: inherit;
+
+  cursor: pointer;
+}
+
+// restyle buttons
+.button {
+  padding: 4px;
+
+  border: 1px solid black;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: lightblue;
+  }
+}
+
