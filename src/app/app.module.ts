@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { EventsComponent } from './components/events/events.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { StatisticsComponent } from './pages/statistics/statistics.component';
 import { BroadcastComponent } from './pages/broadcast/broadcast.component';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { BroadcastComponent } from './pages/broadcast/broadcast.component';
     EventsComponent,
     HeaderComponent,
     NavigationComponent,
+    StatisticsComponent,
     BroadcastComponent
   ],
   imports: [
