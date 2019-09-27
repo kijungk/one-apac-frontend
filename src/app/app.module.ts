@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { EventsComponent } from './components/events/events.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { BroadcastComponent } from './pages/broadcast/broadcast.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     LoginComponent,
     EventsComponent,
     HeaderComponent,
-    NavigationComponent
+    NavigationComponent,
+    BroadcastComponent
   ],
   imports: [
     BrowserModule,
