@@ -12,10 +12,22 @@ html {
   padding: 0;
 }
 
+// basic page layout
 .page {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+// fonts
+.oswald {
+  font-family: 'Oswald', sans-serif;
+
+  line-height: 1; // Oswald font comes with a high line-height
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif;
 }
 
 // reset button styles
