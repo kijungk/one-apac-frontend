@@ -1,0 +1,16 @@
+#login {
+  display: flex;
+  flex-direction: column;
+
+  width: 300px;
+
+  .title {
+    margin: 24px;
+  }
+
+  .form {
+    .fields {
+      margin-bottom: 12px;
+    }
+  }
+}
