@@ -1,8 +1,9 @@
 <div class="component" id="navigation">
-  <div class="navigation" *ngFor="let navigation of navigations">
+  <a class="navigation" *ngFor="let navigation of navigations" [routerLink]="navigation.url" routerLinkActive="active"
+    [routerLinkActiveOptions]="routerLinkActiveOptions">
     <i class={{navigation.iconClass}}></i>
     <div class="navigation-description roboto">
       {{navigation.description}}
     </div>
-  </div>
+  </a>
 </div>
