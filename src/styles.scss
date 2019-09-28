@@ -44,10 +44,12 @@ button {
 
 // restyle buttons
 .button {
+  height: 32px;
+
   padding: 4px;
 
   border: 1px solid black;
-  border-radius: 4px;
+  border-radius: 12px;
 
   &:hover {
     background-color: lightblue;
@@ -61,3 +63,36 @@ a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  height: 32px;
+  width: 100%;
+
+  border: none;
+  border-radius: 12px;
+
+  background: lightgrey;
+
+  font-size: 16px;
+  text-align: center;
+
+  margin-top: 2px;
+  margin-bottom: 2px;
+
+  &:focus {
+    outline: none;
+
+    background-color: transparent;
+
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+
+    transition: background-color 0.3s;
+    transition: border-radius 0.3s;
+    transition: border-bottom 0.5s;
+  }
+}
