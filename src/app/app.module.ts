@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { EventsComponent } from './components/events/events.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
@@ -17,7 +16,6 @@ import { BroadcastComponent } from './pages/broadcast/broadcast.component';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    EventsComponent,
     HeaderComponent,
     NavigationComponent,
     StatisticsComponent,
