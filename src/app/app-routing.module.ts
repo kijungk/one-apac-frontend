@@ -6,9 +6,22 @@ import { BroadcastComponent } from './pages/broadcast/broadcast.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'statistics', component: StatisticsComponent },
-  { path: 'broadcast', component: BroadcastComponent }
+  {
+    path: '',
+    pathMatch: 'full',
+    component: HomeComponent,
+    data: { animation: 'Home' }
+  },
+  {
+    path: 'statistics',
+    component: StatisticsComponent,
+    data: { animation: 'Statistics' }
+  },
+  {
+    path: 'broadcast',
+    component: BroadcastComponent,
+    data: { animation: 'Broadcast' }
+  }
 ];
 
 @NgModule({
