@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,17 +16,19 @@ import { BroadcastComponent } from './pages/broadcast/broadcast.component';
 @NgModule({
   declarations: [
     AppComponent,
+    BroadcastComponent,
+    HeaderComponent,
     HomeComponent,
     LoginComponent,
-    HeaderComponent,
     NavigationComponent,
-    StatisticsComponent,
-    BroadcastComponent
+    StatisticsComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
