@@ -2,9 +2,9 @@
   <div class="title roboto">Please login to access your event dashboard.</div>
   <form class="form" id="form-login">
     <div class="fields">
-      <input type="text" placeholder="username" required>
-      <input type="password" placeholder="password" required>
+      <input type="text" placeholder="username" required [(ngModel)]="form.username" name="username">
+      <input type="password" placeholder="password" required [(ngModel)]="form.password" name="password">
     </div>
-    <button class="button oswald">Login</button>
+    <button class="button oswald" (click)="login()">Login</button>
   </form>
 </div>
