@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
 import { BroadcastComponent } from './pages/broadcast/broadcast.component';
-
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -15,12 +16,18 @@ const routes: Routes = [
   {
     path: 'statistics',
     component: StatisticsComponent,
+    canActivate: [AuthGuard],
     data: { animation: 'Statistics' }
   },
   {
     path: 'broadcast',
     component: BroadcastComponent,
+    canActivate: [AuthGuard],
     data: { animation: 'Broadcast' }
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
   }
 ];
 
