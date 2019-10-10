@@ -31,4 +31,11 @@ export class AdministratorService {
     this.administrator.eventId = administrator.eventId;
     return;
   }
+
+  public logout(): void {
+    this.administrator.id = null;
+    this.administrator.username = null;
+    this.administrator.eventId = null;
+    return;
+  }
 }

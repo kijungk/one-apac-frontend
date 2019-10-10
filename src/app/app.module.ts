@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
 import { BroadcastComponent } from './pages/broadcast/broadcast.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BroadcastComponent } from './pages/broadcast/broadcast.component';
     HomeComponent,
     LoginComponent,
     NavigationComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     AppRoutingModule,
