@@ -1,8 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-
-import { Administrator } from '../../classes/administrator/administrator';
 import { AdministratorService } from '../../services/administrator/administrator.service';
+import { Administrator } from '../../classes/administrator/administrator';
 
 @Component({
   selector: 'app-login',
@@ -10,12 +9,12 @@ import { AdministratorService } from '../../services/administrator/administrator
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit, OnDestroy {
-  form: object = {
+  private form: object = {
     username: '',
     password: ''
   };
 
-  loginSubscription: Subscription;
+  private loginSubscription: Subscription;
 
   constructor(
     private administratorService: AdministratorService
@@ -27,16 +26,22 @@ export class LoginComponent implements OnInit, OnDestroy {
   private login(): void {
     this.loginSubscription = this.administratorService.login(this.form['username'], this.form['password'])
       .subscribe(
-        (response) => {
-          console.log('response: ', response);
+        (response: Administrator): void => {
+          return this.administratorService.setAdministrator(response);
         },
-        (error) => {
-          alert(error.error);
+        (error): void => {
+          return alert(error.error);
+        },
+        (): void => {
+          console.log(`Login complete! Welcome ${this.administratorService.administrator.username}.`);
+          return;
         }
       );
   }
 
   ngOnDestroy() {
-    this.loginSubscription.unsubscribe();
+    if (this.loginSubscription) {
+      this.loginSubscription.unsubscribe();
+    }
   }
 }
