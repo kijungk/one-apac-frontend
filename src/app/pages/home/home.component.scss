@@ -1,0 +1,15 @@
+#home {
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-size: 20px;
+    }
+  }
+}
