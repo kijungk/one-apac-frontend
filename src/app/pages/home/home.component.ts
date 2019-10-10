@@ -19,4 +19,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.administrator = this.administratorService.administrator;
   }
+
+  private logout(): void {
+    return this.administratorService.logout();
+  }
 }
