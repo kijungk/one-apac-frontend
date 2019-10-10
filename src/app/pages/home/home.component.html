@@ -1,3 +1,11 @@
 <div class="page" id="home">
-  <app-login></app-login>
+  <app-login *ngIf="!administrator.id"></app-login>
+  <div class="content" [@loginAnimation]="administrator.id ? 'loggedIn' : 'notLoggedIn'">
+    <div class="oswald title">
+      Welcome {{administrator.username}}!
+    </div>
+    <div class="roboto subtitle">
+      For any questions or problems, please contact the developer directly at kimkijung@icloud.com
+    </div>
+  </div>
 </div>

@@ -1,5 +1,5 @@
 <div id="app" [@routeTransitionAnimation]="prepareRoute(outlet)">
   <app-header></app-header>
   <router-outlet #outlet="outlet"></router-outlet>
-  <app-navigation></app-navigation>
+  <app-navigation [@loginAnimation]="administrator.id ? 'loggedIn' : 'notLoggedIn'"></app-navigation>
 </div>

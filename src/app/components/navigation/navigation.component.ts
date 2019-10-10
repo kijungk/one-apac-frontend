@@ -7,7 +7,7 @@ import { Navigation } from '../../classes/navigation/navigation';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
-  navigations: Array<Navigation> = new Array();
+  navigations: Array<Navigation>;
   routerLinkActiveOptions: object;
 
   constructor() { }

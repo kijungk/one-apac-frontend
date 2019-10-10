@@ -9,13 +9,13 @@ import { Administrator } from '../../classes/administrator/administrator';
   providedIn: 'root'
 })
 export class AdministratorService {
-  administrator: Administrator = new Administrator();
+  public administrator: Administrator = new Administrator();
 
   constructor(
     private http: HttpClient
   ) { }
 
-  login(username, password): Observable<Administrator> {
+  public login(username, password): Observable<Administrator> {
     const body = {
       username,
       password
@@ -23,5 +23,12 @@ export class AdministratorService {
 
     return this.http.post<Administrator>('/api/administrators/login', body)
       .pipe(map(data => data));
+  }
+
+  public setAdministrator(administrator: Administrator): void {
+    this.administrator.id = administrator.id;
+    this.administrator.username = administrator.username;
+    this.administrator.eventId = administrator.eventId;
+    return;
   }
 }
