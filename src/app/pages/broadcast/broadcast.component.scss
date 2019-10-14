@@ -1,0 +1,26 @@
+#broadcast {
+
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    .select {
+      width: 100%;
+
+      border: none;
+      outline: none;
+
+      font-size: 20px;
+
+      margin-bottom: 24px;
+
+      padding: 8px;
+
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .textarea {
+      margin-bottom: 24px;
+    }
+  }
+}
