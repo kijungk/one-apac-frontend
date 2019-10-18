@@ -18,7 +18,7 @@ export class BroadcastService {
       .pipe(map(data => data));
   }
 
-  public sendBroadcast(message: string, eventId: number): Observable<any> {
+  public sendBroadcast(message: string, eventId: number): Observable<object> {
     return this.http.post<Broadcast>('/api/broadcasts', { text: message, eventId })
       .pipe(map(data => data));
   }

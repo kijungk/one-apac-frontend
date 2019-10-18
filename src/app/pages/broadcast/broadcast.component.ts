@@ -41,16 +41,19 @@ export class BroadcastComponent implements OnInit, OnDestroy {
 
     this.broadcastSubscription = this.broadcastService.sendBroadcast(this.message, this.administrator.eventId)
       .subscribe(
-        (): void => {
-          // successful
-          console.log('success');
+        (response): void => {
+          if (response['success']) {
+            this.message = '';
+          }
+          
           return;
         },
         (error): void => {
           return alert(error.message);
         },
         (): void => {
-          console.log('request ended');
+          console.log('Broadcast sent');
+          
           return;
         }
       );
