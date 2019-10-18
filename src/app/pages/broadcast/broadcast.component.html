@@ -1,3 +1,16 @@
 <div class="page" id="broadcast">
-  Broadcast works!
+  <div class="content">
+
+    <select class="select" [(ngModel)]="selectedBroadcast" (ngModelChange)="setSelectedBroadcastAsMessage()">
+      <option value="" disabled selected>Select broadcast message or type your own below</option>
+      <option *ngFor="let broadcast of broadcasts | async" [ngValue]="broadcast">
+        {{broadcast.description}}
+      </option>
+    </select>
+
+    <textarea class="textarea" cols="30" rows="20" [(ngModel)]="message" name="message"></textarea>
+
+    <button class="button oswald" (click)="sendBroadcast()">Send Broadcast</button>
+
+  </div>
 </div>
