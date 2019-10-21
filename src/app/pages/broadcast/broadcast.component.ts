@@ -45,7 +45,7 @@ export class BroadcastComponent implements OnInit, OnDestroy {
           if (response['success']) {
             this.message = '';
           }
-
+          
           return;
         },
         (error): void => {
@@ -53,6 +53,7 @@ export class BroadcastComponent implements OnInit, OnDestroy {
         },
         (): void => {
           console.log('Broadcast sent');
+          
           return;
         }
       );
