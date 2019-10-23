@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Navigation } from '../../classes/navigation/navigation';
+import { AdministratorService } from '../../services/administrator/administrator.service';
+import { NavigationService } from '../../services/navigation/navigation.service';
+import { Administrator } from '../../classes/administrator/administrator';
 
 @Component({
   selector: 'app-navigation',
@@ -10,15 +13,16 @@ export class NavigationComponent implements OnInit {
   navigations: Array<Navigation>;
   routerLinkActiveOptions: object;
 
-  constructor() { }
+  administrator: Administrator;
+
+  constructor(
+    private administratorService: AdministratorService,
+    private navigationService: NavigationService
+  ) { }
 
   ngOnInit() {
-    const navigations = [
-      new Navigation('Home', 'fas fa-home', '/'),
-      new Navigation('Statistics', 'fas fa-chart-bar', '/statistics'),
-      new Navigation('Broadcast', 'fas fa-bullhorn', '/broadcast')
-    ];
-    this.navigations = navigations;
+    this.administrator = this.administratorService.administrator;
+    this.navigations = this.navigationService.navigations;
 
     this.routerLinkActiveOptions = {
       exact: true
