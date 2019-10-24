@@ -1,0 +1,12 @@
+<div class="page" id="lip-sync-battle">
+  <div class="content">
+    <div class="oswald title">Voting Feature</div>
+    <input class="input-toggle" type="checkbox" *ngIf="voteStatus" [(ngModel)]="voteStatus.isActive"
+      (change)="setVoteStatus()" />
+
+    <div class="vote-statistics" *ngFor="let vote of votes | async">
+      <div class="roboto vote-region">{{vote.region}}: </div>
+      <div class="roboto vote-count">{{vote.count}} vote(s)</div>
+    </div>
+  </div>
+</div>

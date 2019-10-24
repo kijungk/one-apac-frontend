@@ -13,16 +13,18 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { StatisticsComponent } from './pages/statistics/statistics.component';
 import { BroadcastComponent } from './pages/broadcast/broadcast.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { LipSyncBattleComponent } from './pages/lip-sync-battle/lip-sync-battle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BroadcastComponent,
     HeaderComponent,
-    HomeComponent,
     LoginComponent,
     NavigationComponent,
+    HomeComponent,
+    LipSyncBattleComponent,
     StatisticsComponent,
+    BroadcastComponent,
     PageNotFoundComponent
   ],
   imports: [

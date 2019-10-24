@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { LipSyncBattleComponent } from './pages/lip-sync-battle/lip-sync-battle.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
 import { BroadcastComponent } from './pages/broadcast/broadcast.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
@@ -12,6 +13,12 @@ const routes: Routes = [
     pathMatch: 'full',
     component: HomeComponent,
     data: { animation: 'Home' }
+  },
+  {
+    path: 'lip-sync-battle',
+    component: LipSyncBattleComponent,
+    canActivate: [AuthGuard],
+    data: { animation: 'LipSyncBattle' }
   },
   {
     path: 'statistics',

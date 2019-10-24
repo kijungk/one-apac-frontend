@@ -1,0 +1,38 @@
+#lip-sync-battle {
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      font-size: 24px;
+
+      margin-bottom: 12px;
+    }
+
+    .input-toggle {
+      margin-bottom: 24px;
+    }
+
+    .vote-statistics {
+      display: flex;
+      flex-direction: row;
+
+      width: 100%;
+
+      .vote-region {
+        width: 50%;
+
+        text-align: right;
+        font-style: italic;
+        white-space: pre;
+      }
+
+      .vote-count {
+        width: 50%;
+
+        text-align: left;
+      }
+    }
+  }
+}

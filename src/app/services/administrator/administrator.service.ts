@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { Administrator } from '../../classes/administrator/administrator';
+import { NavigationService } from '../navigation/navigation.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,8 @@ export class AdministratorService {
   public administrator: Administrator = new Administrator();
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private navigationService: NavigationService
   ) { }
 
   public login(username, password): Observable<Administrator> {
@@ -29,6 +31,9 @@ export class AdministratorService {
     this.administrator.id = administrator.id;
     this.administrator.username = administrator.username;
     this.administrator.eventId = administrator.eventId;
+
+    this.navigationService.addLipSyncBattleNavigation(this.administrator.username);
+
     return;
   }
 
