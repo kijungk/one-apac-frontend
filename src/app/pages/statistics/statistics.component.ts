@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Administrator } from '../../classes/administrator/administrator';
+import { Users } from '../../classes/users/users';
 import { View } from '../../classes/view/view';
-import { Vote } from '../../classes/vote/vote';
 import { AdministratorService } from '../../services/administrator/administrator.service';
 import { StatisticsService } from '../../services/statistics/statistics.service';
 
@@ -12,9 +12,9 @@ import { StatisticsService } from '../../services/statistics/statistics.service'
   styleUrls: ['./statistics.component.scss']
 })
 export class StatisticsComponent implements OnInit {
-  administrator: Administrator;
-  views: Observable<View[]>;
-  votes: Observable<Vote[]>;
+  private administrator: Administrator;
+  private users: Observable<Users>;
+  private views: Observable<View[]>;
 
   constructor(
     private administratorService: AdministratorService,
@@ -24,7 +24,9 @@ export class StatisticsComponent implements OnInit {
   ngOnInit() {
     this.administrator = this.administratorService.administrator;
 
+    this.users = this.statisticsService.getUsers(this.administrator.eventId);
     this.views = this.statisticsService.getViews(this.administrator.eventId);
+    return;
   }
 
 }
